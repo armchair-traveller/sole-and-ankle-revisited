@@ -4,13 +4,22 @@ import { ThemeProvider } from 'styled-components'
 
 import Header from '../Header'
 import ShoeIndex from '../ShoeIndex'
+
+const breakpoints = {
+  phone: 37.5, // rem
+  tablet: 59.375, // rem
+  laptop: 81.25, // rem
+}
+
 const theme = {
-  breakpoints: {
-    phone: '37.5rem', // 600px
-    tablet: '59.375rem', // 950px
-    laptop: '81.25rem', // 1300px
+  breakpoints,
+  // A media utility that simplifies media query usage
+  media: {
+    phone: `@media (max-width: ${breakpoints.phone}rem)`,
+    tablet: `@media (max-width: ${breakpoints.tablet}rem)`,
+    laptop: `@media (max-width: ${breakpoints.laptop}rem)`,
   },
-  // * example: @media (max-width: ${({ theme }) => theme.breakpoints.tablet})
+  // * example: ${theme.media.phone} { ... }
 }
 
 const App = () => {
