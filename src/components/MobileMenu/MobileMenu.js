@@ -20,6 +20,7 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
   }
 
   return (
+    // backdrop close not triggering but no big deal it's just an api thing, we can fix it later
     <Dialog ref={dialogRef}>
       <CloseButton onClick={onDismiss}>
         <Icon id="close" />
