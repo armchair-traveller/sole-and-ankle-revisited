@@ -39,6 +39,12 @@ const App = () => {
 
 const Main = styled.main`
   padding: 64px 32px;
+  ${({ theme }) => theme.media.tablet} {
+    padding: 48px 32px;
+  }
+  ${({ theme }) => theme.media.phone} {
+    padding: 48px 16px;
+  }
 `
 
 export default App
