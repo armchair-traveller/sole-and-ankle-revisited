@@ -13,13 +13,13 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
   const dialogRef = useRef(null)
   useEffect(() => {
     dialogRef.current?.showModal(isOpen)
+    if (!isOpen) onDismiss()
   }, [isOpen])
   if (!isOpen) {
     return null
   }
 
   return (
-    // Due to two-way binding being difficult, close not handled. We would handle this easily if in Svelte
     <Dialog ref={dialogRef}>
       <CloseButton onClick={onDismiss}>
         <Icon id="close" />
