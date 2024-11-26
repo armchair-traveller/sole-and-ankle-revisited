@@ -60,6 +60,8 @@ const Dialog = styled.dialog`
   z-index: 999; /* not optimal compared to a portal but this implementation is lightweight  */
   height: 100%;
   padding-right: 10vh;
+  display: flex;
+  flex-direction: column;
 
   &::backdrop {
     background-color: rgba(0, 0, 0, 0.5);
@@ -79,6 +81,7 @@ const Footer = styled.footer`
   flex-direction: column;
   gap: 16px;
   margin: 32px;
+  margin-top: auto;
 `
 
 const FooterLink = styled.a`
