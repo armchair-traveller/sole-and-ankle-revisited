@@ -41,7 +41,7 @@ const Header = () => {
             <Icon id="search" />
             <VisuallyHidden>Search</VisuallyHidden>
           </UnstyledButton>
-          <UnstyledButton>
+          <UnstyledButton onClick={() => setShowMobileMenu(!showMobileMenu)}>
             <Icon id="menu" />
             <VisuallyHidden>Open menu</VisuallyHidden>
           </UnstyledButton>
@@ -116,7 +116,7 @@ const Filler = styled.div`
   }
 `
 
-const NavLink = styled.a`
+export const NavLink = styled.a`
   font-size: 1.125rem;
   text-transform: uppercase;
   text-decoration: none;
