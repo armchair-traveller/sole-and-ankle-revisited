@@ -60,6 +60,9 @@ const MainHeader = styled.div`
   padding: 18px 32px;
   height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
+  overflow-x: auto;
+  scrollbar-width: thin;
+  overflow-y: clip;
 
   ${({ theme }) => theme.media.tablet} {
     justify-content: space-between;
@@ -75,8 +78,7 @@ const MainHeader = styled.div`
 
 const DesktopNav = styled.nav`
   display: flex;
-  gap: 48px;
-  margin: 0px 48px;
+  gap: 6vw;
 
   ${({ theme }) => theme.media.tablet} {
     display: none;
@@ -98,6 +100,7 @@ const MobileActions = styled.div`
 
 const LogoWrapper = styled.div`
   flex: 1;
+  margin-right: 2rem;
 
   ${({ theme }) => theme.media.tablet} {
     flex: revert;
