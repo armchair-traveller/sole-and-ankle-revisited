@@ -63,6 +63,7 @@ const Dialog = styled.dialog`
   padding-right: 10vh;
   display: flex;
   flex-direction: column;
+  max-height: 100dvh;
 
   &::backdrop {
     background-color: rgba(0, 0, 0, 0.5);
